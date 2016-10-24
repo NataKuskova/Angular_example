@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS</title>
+    <script src="js/angular/angular.min.js"></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div ng-controller="MyController">
+                {{1+2}}
+                <p>{{var1}}</p>
+                <p>{{obj.var2}}</p>
+                <ul ng-repeat="book in books">
+                    <li>{{book.title}}</li>
+                </ul>
+                <p>{{books[1].title}}</p>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        var data = 'Данные из модели';
+        var app = 123456;
+        (function(){
+            var app = angular.module('MyApp', []);
+            app.controller('MyController', function($scope){
+                $scope.var1 = data;
+                $scope.obj = {
+                    var1: 'test',
+                    var2: 123
+                };
+                $scope.books = [
+                    {title: 'Book 1', year: '2000'},
+                    {title: 'Book 2', year: '2005'},
+                    {title: 'Book 3', year: '2010'},
+                ];
+            });
+        })();
+
+    </script>
+
+</body>
+</html>

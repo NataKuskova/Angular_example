@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="try">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <title>AngularJS</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-resource.js"></script>
+    <script src="js/angular/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="js/external/dirPagination.js"></script>
+
+    <script src="js/app/app.module.js"></script>
+    <script src="js/app/app.config.js"></script>
+
+    <script src="js/app/core/post/post.module.js"></script>
+    <script src="js/app/core/post/post.service.js"></script>
+
+    <script src="js/app/blog-detail/blog-detail.module.js"></script>
+    <script src="js/app/blog-detail/blog-detail.component.js"></script>
+    <script src="js/app/blog-list/blog-list.module.js"></script>
+    <script src="js/app/blog-list/blog-list.component.js"></script>
+
+    <script src="js/app/utils/confirm-click/confirm-click.module.js"></script>
+    <script src="js/app/utils/confirm-click/confirm-click.directive.js"></script>
+
+    <script src="js/app/utils/try-nav/try-nav.module.js"></script>
+    <script src="js/app/utils/try-nav/try-nav.directive.js"></script>
+
+    <style>
+        .new-class{
+            font-size: 72px;
+        }
+        .other-class{
+            font-size: 32px;
+        }
+        .new-class2{
+            font-size: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--<h1 class="new-class" ng-class="{'other-class': name=='Nata', 'new-class2': font==120}">Hello,-->
+        <!--<span ng-if="name">{{name}}</span>-->
+        <!--<span ng-if="!name">World</span>-->
+        <!--!-->
+    <!--</h1>-->
+    <!--<input type="text" ng-model="name">-->
+    <!--<input type="text" ng-model="font" placeholder="font"/>-->
+
+    <!--<blog-list></blog-list>-->
+    <!--<nav class="container">-->
+        <!--<h1>Us</h1>-->
+    <!--</nav>-->
+    <div  class="container">
+        <try-nav></try-nav>
+        <div class="col-sm-12" ng-view>
+
+        </div>
+    </div>
+</body>
+</html>
